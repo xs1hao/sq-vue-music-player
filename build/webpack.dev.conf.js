@@ -28,11 +28,11 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         { from: /.*/, to: path.posix.join(config.dev.assetsPublicPath, 'index.html') },
       ],
     },
-    hot: true,
+    hot: true, // 热更新 HMR （hot module replacement）
     contentBase: false, // since we use CopyWebpackPlugin.
     compress: true,
     host: HOST || config.dev.host,
-    port: PORT || config.dev.port,
+    port: PORT || config.dev.port, // 8081
     open: config.dev.autoOpenBrowser,
     overlay: config.dev.errorOverlay
       ? { warnings: false, errors: true }

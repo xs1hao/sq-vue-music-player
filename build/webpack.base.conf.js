@@ -8,17 +8,18 @@ function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
+// 暂时不用 eslit 看着一堆一异常好不舒服；
 const createLintingRule = () => ({
-  test: /\.(js|vue)$/,
-  loader: 'eslint-loader',
-  enforce: 'pre',
-  include: [resolve('src'), resolve('test')],
-  options: {
-    formatter: require('eslint-friendly-formatter'),
-    emitWarning: !config.dev.showEslintErrorsInOverlay,
-    // 自动修复eslint的错误
-    fix: true
-  }
+  // test: /\.(js|vue)$/,
+  // loader: 'eslint-loader',
+  // enforce: 'pre',
+  // include: [resolve('src'), resolve('test')],
+  // options: {
+  //   formatter: require('eslint-friendly-formatter'),
+  //   emitWarning: !config.dev.showEslintErrorsInOverlay,
+  //   // 自动修复eslint的错误
+    // fix: true
+  // }
 })
 
 module.exports = {
@@ -36,7 +37,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
-      'vue$': 'vue/dist/vue.esm.js',
+      'vue$': 'vue/dist/vue.esm.js', // 设置别名；
       '@': resolve('src'),
     }
   },
@@ -54,7 +55,7 @@ module.exports = {
         include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
       },
       {
-        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        test: /\.(png|jpe?g|gif|svg|ico)(\?.*)?$/,
         loader: 'url-loader',
         options: {
           limit: 10000,

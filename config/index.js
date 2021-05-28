@@ -10,12 +10,20 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: { // 接口代码配置；
+      '/api': {
+        target: 'http://localhost:3000', // 本地模拟的网易云音乐接口
+        // 发送请求时，请求路径重写：将 /api/xxx --> /xxx （去掉/api）
+        pathRewrite: {
+          '^/api': ''
+        }
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
-    port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
-    autoOpenBrowser: false,
+    port: 8081, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    autoOpenBrowser: true, // 是不是自动打开浏览器？
     errorOverlay: true,
     notifyOnErrors: true,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-

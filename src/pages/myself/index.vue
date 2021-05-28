@@ -1,13 +1,13 @@
 <template>
-  <div id="app">
-    <router-view/>
-  </div>
+  <p>
+    in my-self music
+  </p>
 </template>
 
 <script>
 export default {
-  name: 'App',
-};
+  name: 'myMusic'
+}
 </script>
 
 <style>
