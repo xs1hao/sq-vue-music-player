@@ -9,15 +9,13 @@
         background-color="#545c64"
         text-color="#fff"
         active-text-color="#ffd04b">
-        <!-- <template v-for="item in headerOptions">
-          <el-menu-item index="item.id" :key="item.title">{{item.title}}</el-menu-item>
-         </template> -->
-        <el-menu-item index="descover">发现音乐</el-menu-item>
-        <el-menu-item index="myself">我的音乐</el-menu-item>
-        <el-menu-item index="friends">朋友</el-menu-item>
-        <el-menu-item index="shop">商城</el-menu-item>
-        <el-menu-item index="musicer">音乐人</el-menu-item>
-        <el-menu-item index="download">下载客户端</el-menu-item>
+        <template v-for="item in headerOptions">
+          <el-menu-item
+            :index="item.href"
+            :key="item.title">
+            {{item.title}}
+          </el-menu-item>
+         </template>
       </el-menu>
     </div>
   </div>
