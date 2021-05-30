@@ -30,15 +30,15 @@ export default {
         { title: '发现音乐', id: '1', href: 'descover' },
         { title: '我的音乐', id: '2', href: 'myself' },
         { title: '朋友', id: '3', href: 'friends' },
-        { title: '商城', id: '4', href: 'shop' },
+        { title: '商城', id: '4', href: 'supermarket' },
         { title: '音乐人', id: '5', href: 'musicer' },
-        { title: '下载客户端', id: '6', href: 'download' },
+        // { title: '下载客户端', id: '6', href: 'download' },
       ],
     };
   },
   methods: {
     handleClick(tab) {
-      // 将点击的tab传给父组件
+      // 将点击的 tab 传给父组件, 在父组件（home.vue）中执行路由的跳转；
       this.$emit('tabs-click', tab);
     },
   },

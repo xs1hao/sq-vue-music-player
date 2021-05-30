@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import service from '../../api'
+import service from '../../api';
 import carousel from '../../components/carousel';
 // 首页除去 header 部分；
 export default {

@@ -20,7 +20,7 @@ Vue.use(ElementUI);
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  router,
+  router, // 将路由挂载到根实例上；
   components: { App },
   template: '<App/>',
 });
