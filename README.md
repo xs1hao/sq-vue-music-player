@@ -16,19 +16,19 @@
 #### 2021年5月28日21:01:22 （第二天，周五）
     目标：引入element-ui库；本地调用接口；做两个路由切换的页面；
     1、引入 element-ui 库
-      * 安装element-ui ，执行命令：npm i element-ui -S；
-      * 项目中按需加载 需要借助 babel-plugin-component；执行命令： npm install babel-plugin-component -D
-      * **注意**：
-      * 安装element-ui 官网给的配置，修改了babelrc文件，后项目需要执行如下命令： npm install babel-preset-es2015 --save-dev;
-      * 放弃了，还是全部引入吧，一个个的引入，太慢了。
+  >>>>* 安装element-ui ，执行命令：npm i element-ui -S；
+  >>>>* 项目中按需加载 需要借助 babel-plugin-component；执行命令： npm install babel-plugin-component -D
+  >>>>* **注意**：
+  >>>>* 安装element-ui 官网给的配置，修改了babelrc文件，后项目需要执行如下命令： npm install babel-preset-es2015 --save-dev;
+  >>>>* 放弃了，还是全部引入吧，一个个的引入，太慢了。
     2、快速生产vue模板，在 .vue 文件中输入vue 或者 自己在vscode 中配置模板即可。
     3、调用接口，怎么能缺少 axios，执行命令： npm install axios
 
 #### 2021年5月30日05:59:06 （第三天，周天）
     目标：
     1、Vue-router
-      [官方指南](https://router.vuejs.org/zh/guide/)；
-      [完整的导航解析流程](https://router.vuejs.org/zh/guide/advanced/navigation-guards.html#%E7%BB%84%E4%BB%B6%E5%86%85%E7%9A%84%E5%AE%88%E5%8D%AB);
+  >>>>>[官方指南](https://router.vuejs.org/zh/guide/);
+  >>>>>[完整的导航解析流程](https://router.vuejs.org/zh/guide/advanced/navigation-guards.html#%E7%BB%84%E4%BB%B6%E5%86%85%E7%9A%84%E5%AE%88%E5%8D%AB)
         1. 在失活的组件里调用 beforeRouteLeave 守卫。
         2. 调用全局的 beforeEach 守卫。
         3. 在重用的组件里调用 beforeRouteUpdate 守卫 (2.2+)。
