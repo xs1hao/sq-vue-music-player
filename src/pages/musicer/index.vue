@@ -32,7 +32,7 @@ export default {
     // numDouble 只在使用的时候才会调用，并不会在组件初始化的时候调用；
     numDouble() {
       // 这里的 this 指向的是 当前 component;
-      console.log('numDouble-this:',this);
+      // console.log('numDouble-this:',this);
       return this.num * 2;
     },
 

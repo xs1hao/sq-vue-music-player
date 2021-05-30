@@ -20,7 +20,7 @@ export default {
     carousel,
   },
   created() {
-    this._getBannerSwiper();
+    // this._getBannerSwiper();
     // this.getRecomentSongs(); // 需要登录
 
   },
