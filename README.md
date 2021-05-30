@@ -54,3 +54,6 @@
   ##### 2、添加 less
       安装 less 与 less-loader；
   ##### 3、封装axios 设置请求及响应拦截器；
+  ##### 4、引入 iconfont 图标
+      需要在引入iconfont.css文件的同时，还要引入该文件中对应的 三个文件。
+      将 iconfont.css 在全局的css 文件中引入；
