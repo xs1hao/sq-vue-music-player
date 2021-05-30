@@ -10,7 +10,7 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: { // 接口代码配置；
+    proxyTable: { // 接口代理配置；
       '/api': {
         target: 'http://localhost:3000', // 本地模拟的网易云音乐接口
         // 发送请求时，请求路径重写：将 /api/xxx --> /xxx （去掉/api）
