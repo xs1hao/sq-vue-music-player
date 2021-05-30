@@ -1,5 +1,8 @@
 <template>
   <div class="yy-header">
+    <div>
+      <i class="iconfont icon-shangyige"></i>
+    </div>
     <div class="tabs">
       <el-menu
         :default-active="'descover'"

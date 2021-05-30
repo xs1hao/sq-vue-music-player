@@ -1,5 +1,6 @@
 // 引入 Element-ui 样式；
 import 'element-ui/lib/theme-chalk/index.css'; // absolute 要放在 relative 前面
+import './assets/css/style.css';
 
 import Vue from 'vue';
 // import { Button, Tabs } from 'element-ui';
