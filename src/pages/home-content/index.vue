@@ -20,20 +20,18 @@ export default {
     carousel,
   },
   created() {
-    // this._getBannerSwiper();
     // this.getRecomentSongs(); // 需要登录
-
+    // this.getUserRecord('19047'); // 请求 502；
   },
   methods: {
-    // 获取轮播图数据；
-    _getBannerSwiper() {
-      service.getBannerSwiper().then(res => {
-        console.log('in home conten',res);
-      })
-    },
     getRecomentSongs() {
       service.getRecSongsFn().then(res => {
-        console.log('in home conten',res);
+        console.log('In home conten',res);
+      })
+    },
+    getUserRecord(id) {
+      service.userRecordFn(id).then(res => {
+        console.log(res);
       })
     }
   }
@@ -41,5 +39,9 @@ export default {
 </script>
 
 <style>
-
+  .home-content{
+    width: 100%;
+    padding: 0 150px;
+    height: 350px;
+  }
 </style>

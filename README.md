@@ -26,7 +26,8 @@
 
 #### 2021年5月30日05:59:06 （第三天，周天）
     目标：
-    1、练习 路由,  [官方链接](https://router.vuejs.org/zh/guide/)；
+    >1、Vue-router
+      [官方指南](https://router.vuejs.org/zh/guide/)；
       [完整的导航解析流程](https://router.vuejs.org/zh/guide/advanced/navigation-guards.html#%E7%BB%84%E4%BB%B6%E5%86%85%E7%9A%84%E5%AE%88%E5%8D%AB):
         1. 在失活的组件里调用 beforeRouteLeave 守卫。
         2. 调用全局的 beforeEach 守卫。
@@ -39,3 +40,6 @@
         9. 调用全局的 afterEach 钩子。
         10. 触发 DOM 更新。
         11. 调用 beforeRouteEnter 守卫中传给 next 的回调函数，创建好的组件实例会作为回调函数的参数传入。
+    >2、添加 less
+      安装 less 与 less-loader；
+    >3、封装axios 设置请求及响应拦截器；

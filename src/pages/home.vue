@@ -63,6 +63,9 @@ export default {
 </script>
 
 <style scoped>
+  .wangyi-yun-music{
+    width: 100%;
+  }
   .fade-enter-active, .fade-leave-active {
     transition: opacity .75s ease;
   }
