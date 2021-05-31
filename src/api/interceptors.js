@@ -28,10 +28,10 @@ http.interceptors.response.use(
   error => {
     switch(error.response.status){
       case 504:
-        Message.error(`请求失败，接口${error.response.status}，请求超时。`);
+        console.error(`请求失败，接口${error.response.status}，请求超时。`);
         break;
       default:
-        Message.error("请求失败!");
+        console.error("请求失败!");
         break;
     }
     return Promise.reject(error.response);

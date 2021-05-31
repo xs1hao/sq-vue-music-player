@@ -1,8 +1,5 @@
 <template>
   <div class="yy-header">
-    <div>
-      <i class="iconfont icon-shangyige"></i>
-    </div>
     <div class="tabs">
       <el-menu
         :default-active="'descover'"
@@ -57,5 +54,14 @@ export default {
 </script>
 
 <style>
-
+  .yy-header{
+    background-color: #545c64;
+  }
+  .el-menu.el-menu--horizontal{
+    border-bottom: 0;
+  }
+  .tabs{
+    width: 50%;
+    margin: 0 auto;
+  }
 </style>

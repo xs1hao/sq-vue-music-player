@@ -6,6 +6,8 @@ import {
   recomendSongs, // 推荐的歌曲
   bannerSwiper,
   userRecord, // user 用户播放记录
+  highquality,
+  catlist
 } from "./config";
 
 export default {

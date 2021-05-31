@@ -1,13 +1,16 @@
 <template>
   <div class="home-content">
     <!-- 轮播图 -->
-    <carousel></carousel>
+    <div class="home-carousel">
+      <carousel></carousel>
+    </div>
   </div>
 </template>
 
 <script>
 import service from '../../api';
 import carousel from '../../components/carousel';
+
 // 首页除去 header 部分；
 export default {
   name: 'HomeContent',
@@ -20,7 +23,7 @@ export default {
     carousel,
   },
   created() {
-    // this.getRecomentSongs(); // 需要登录
+    this.getRecomentSongs(); // 需要登录
     // this.getUserRecord('19047'); // 请求 502；
   },
   methods: {
@@ -38,10 +41,13 @@ export default {
 };
 </script>
 
-<style>
+<style lang="less" scoped>
   .home-content{
     width: 100%;
-    padding: 0 150px;
-    height: 350px;
+    height: calc(100% - 60px);
+    overflow: auto;
+    .home-carousel{
+      background: #7a6fdb80;
+    }
   }
 </style>
