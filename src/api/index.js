@@ -1,14 +1,14 @@
 
 // request 是在工程中自己对 axios 的一层封装；
-import request from "./interceptors";
+import request from './interceptors';
 
 import {
   recomendSongs, // 推荐的歌曲
   bannerSwiper,
   userRecord, // user 用户播放记录
   highquality,
-  catlist
-} from "./config";
+  catlist,
+} from './config';
 
 export default {
   // 获取首页的轮播图数据；
@@ -32,8 +32,8 @@ export default {
     return request.get(userRecord, {
       params: {
         uid,
-        type
-      }
+        type,
+      },
     });
-  }
+  },
 };

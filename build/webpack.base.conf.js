@@ -18,7 +18,7 @@ const createLintingRule = () => ({
   //   formatter: require('eslint-friendly-formatter'),
   //   emitWarning: !config.dev.showEslintErrorsInOverlay,
   //   // 自动修复eslint的错误
-    // fix: true
+  //   fix: true
   // }
 })
 

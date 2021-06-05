@@ -28,16 +28,16 @@ export default {
   },
   methods: {
     getRecomentSongs() {
-      service.getRecSongsFn().then(res => {
-        console.log('In home conten',res);
-      })
+      service.getRecSongsFn().then((res) => {
+        console.log('In home conten', res);
+      });
     },
     getUserRecord(id) {
-      service.userRecordFn(id).then(res => {
+      service.userRecordFn(id).then((res) => {
         console.log(res);
-      })
-    }
-  }
+      });
+    },
+  },
 };
 </script>
 

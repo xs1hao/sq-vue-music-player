@@ -9,12 +9,12 @@ import Router from 'vue-router';
 // import SuperMarket from '../pages/supermarket';
 
 // 使用懒加载的方式，这样只是在组件加载的时候才会加载对应的js，避免的首屏加载的 js 文件过大；
-const HomePage = () => import(/* webpackChunkName: "group-home" */ '../pages/home.vue');
+const HomePage = () => import(/* webpackChunkName: "group-home" */ '../pages/home');
 const HomeContentPage = () => import(/* webpackChunkName: "group-home" */ '../pages/home-content');
 const MySelfPage = () => import(/* webpackChunkName: "group-myself" */ '../pages/myself');
-const FriendsPage = () => import(/* webpackChunkName: "group-friends"*/ '../pages/friends');
-const SuperMarketPage = () => import(/* webpackChunkName: "group-supermarket"*/ '../pages/supermarket');
-const MusicerPage = () => import(/* webpackChunkName: "group-musicer"*/ '../pages/musicer');
+const FriendsPage = () => import(/* webpackChunkName: "group-friends" */ '../pages/friends');
+const SuperMarketPage = () => import(/* webpackChunkName: "group-supermarket" */ '../pages/supermarket');
+const MusicerPage = () => import(/* webpackChunkName: "group-musicer" */ '../pages/musicer');
 
 Vue.use(Router);
 
@@ -23,7 +23,7 @@ const routeArr = [
     path: '/',
     name: 'Home',
     component: HomePage,
-    redirect: "/descover",
+    redirect: '/descover',
     children: [
       {
         path: '/descover',
@@ -33,12 +33,12 @@ const routeArr = [
         path: '/myself/:userId',
         // name 属性，可以帮助我们在不适用 path 的情况下，而使用name 属性，实现路由的跳转；
         name: 'mySelfPage',
-        component: MySelfPage
+        component: MySelfPage,
       },
       {
         path: '/friends',
         component: FriendsPage,
-         // “别名”的功能让你可以自由地将 UI 结构映射到任意的 URL，而不是受限于配置的嵌套路由结构，(好像不生效)；
+        // “别名”的功能让你可以自由地将 UI 结构映射到任意的 URL，而不是受限于配置的嵌套路由结构，(好像不生效)；
         alias: '/b',
       },
       {
@@ -48,17 +48,17 @@ const routeArr = [
         beforeEnter: (to, from, next) => {
           // console.log('In musicer path');
           next();
-        }
+        },
       },
       {
         path: '/supermarket',
-        component: SuperMarketPage
+        component: SuperMarketPage,
       },
-    ]
+    ],
   },
   {
     path: '*', // 匹配全路径；
-    redirect: '/descover'
+    redirect: '/descover',
   },
 ];
 
@@ -71,7 +71,7 @@ const musicRoutes = new Router({
 /**
  * 如下三个守卫：
  * 从上到下依次执行；
- * **/
+ * * */
 
 // beforeEach 全局前置守卫;
 musicRoutes.beforeEach((to, from, next) => {
@@ -87,7 +87,7 @@ musicRoutes.beforeEach((to, from, next) => {
  * 全局解析守卫
  * 这和 router.beforeEach 类似;
  * 区别是在导航被确认之前，同时在所有组件内守卫和异步路由组件被解析之后，解析守卫就被调用。
- * **/
+ * * */
 musicRoutes.beforeResolve((to, from, next) => {
   // console.log('router beforeResolve');
   next();
@@ -95,10 +95,10 @@ musicRoutes.beforeResolve((to, from, next) => {
 
 /**
  * 全局后置钩子
- * **/
+ * * */
 musicRoutes.afterEach((to, from) => {
   // console.log('router afterEach');
-})
+});
 
 
 export default musicRoutes;

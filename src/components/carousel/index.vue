@@ -16,29 +16,29 @@
 </template>
 
 <script>
-import service from '../../api'
+import service from '../../api';
 
 export default {
   name: 'carousel',
   data() {
     return {
       swiperList: [],
-    }
+    };
   },
   created() {
-    this._getBannerSwiper()
+    this._getBannerSwiper();
   },
   methods: {
     // 获取轮播图数据；
     _getBannerSwiper() {
-      service.getBannerSwiper().then(res => {
+      service.getBannerSwiper().then((res) => {
         if (res && res.code === 200) {
-          this.swiperList = res.banners
+          this.swiperList = res.banners;
         }
-      })
+      });
     },
   },
-}
+};
 </script>
 
 <style lang="less" scoped>

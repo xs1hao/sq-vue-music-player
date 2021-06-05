@@ -46,10 +46,10 @@ export default {
     // 路由相关的方法；他的触发条件是，当前组件不会销毁，路由发生变化，即在当前组件下的 子路由变化；
     $route(to, from) {
       // 对路由变化作出响应...
-      console.log('$route_to',to);
-      console.log('$route_from',from);
+      console.log('$route_to', to);
+      console.log('$route_from', from);
     },
-  }
+  },
 };
 </script>
 
