@@ -59,3 +59,13 @@
       将 iconfont.css 在全局的css 文件中引入
 #### 2021年5月31日21:30:48 （第四天，周一）
   计划：让音乐响起来
+
+#### 2021年6月5日17:05:49 （第五天）
+>>> 1.在vue中写函数式组件；
+>>> 2.在vue中使用jsx 写法；
+    jsx 和react一样，是一种语法，所以需要安装对应的babel;
+    ++安装对应的依赖++
+    npm install @vue/babel-preset-jsx @vue/babel-helper-vue-jsx-merge-props
+    使用 jsx 的函数式组件；
+#### 2021年6月6日09:58:18 （第六天，周日）
+>>> 练习使用vuex
