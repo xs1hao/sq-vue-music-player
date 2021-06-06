@@ -1,13 +1,11 @@
 <template>
   <div class="carousel">
     <el-carousel :interval="4000"
-                 type="card"
-                 height="350px"
+                 height="320px"
                  :autoplay="false"
                  trigger="'click'">
       <el-carousel-item v-for="item in swiperList"
                         :key="item.bannerId">
-        <!-- <h3 class="medium">{{ item }}</h3> -->
         <img class="banner-img"
              :src="item.pic"
              alt />
@@ -18,34 +16,35 @@
 </template>
 
 <script>
-import service from '../../api'
+import service from '../../api';
 
 export default {
   name: 'carousel',
   data() {
     return {
       swiperList: [],
-    }
+    };
   },
   created() {
-    this._getBannerSwiper()
+    this._getBannerSwiper();
   },
   methods: {
     // 获取轮播图数据；
     _getBannerSwiper() {
-      service.getBannerSwiper().then(res => {
+      service.getBannerSwiper().then((res) => {
         if (res && res.code === 200) {
-          this.swiperList = res.banners
+          this.swiperList = res.banners;
         }
-      })
+      });
     },
   },
-}
+};
 </script>
 
 <style lang="less" scoped>
 .carousel {
-  width: 80%;
+  width: 50%;
+  margin: 0 auto;
   .banner-img {
     width: 100%;
     height: 100%;

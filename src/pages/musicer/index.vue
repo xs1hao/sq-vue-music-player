@@ -11,8 +11,8 @@
 export default {
   data() {
     return {
-      num: 12
-    }
+      num: 12,
+    };
   },
   computed: {
 
@@ -27,7 +27,7 @@ export default {
      * computed 属性中的方法有两种写法：
      *  1） 直接以函数的形式；
      *  2） 以 key: function() {} 的形式
-     * **/
+     * * */
 
     // numDouble 只在使用的时候才会调用，并不会在组件初始化的时候调用；
     numDouble() {
@@ -36,7 +36,7 @@ export default {
       return this.num * 2;
     },
 
-     testTrangle: function() {
+    testTrangle() {
       return this.num - 3;
     },
 
@@ -72,7 +72,7 @@ export default {
     // console.log(this.numDouble);
     next();
   },
-}
+};
 </script>
 
 <style scoped>

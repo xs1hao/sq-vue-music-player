@@ -1,8 +1,5 @@
 <template>
   <div class="yy-header">
-    <div>
-      <i class="iconfont icon-shangyige"></i>
-    </div>
     <div class="tabs">
       <el-menu
         :default-active="'descover'"
@@ -49,13 +46,22 @@ export default {
     // 路由相关的方法；他的触发条件是，当前组件不会销毁，路由发生变化，即在当前组件下的 子路由变化；
     $route(to, from) {
       // 对路由变化作出响应...
-      console.log('$route_to',to);
-      console.log('$route_from',from);
+      console.log('$route_to', to);
+      console.log('$route_from', from);
     },
-  }
+  },
 };
 </script>
 
 <style>
-
+  .yy-header{
+    background-color: #545c64;
+  }
+  .el-menu.el-menu--horizontal{
+    border-bottom: 0;
+  }
+  .tabs{
+    width: 50%;
+    margin: 0 auto;
+  }
 </style>
